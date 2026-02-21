@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { User, LogIn } from "lucide-react";
 
 function Navbar() {
@@ -6,41 +7,47 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* LEFT - Logo */}
-        <div className="text-2xl font-bold tracking-wide">
+        <Link to="/" className="text-2xl font-bold tracking-wide">
           <span className="text-yellow-400">Randy's</span>
           <span className="text-white">Decor</span>
-        </div>
+        </Link>
 
         {/* CENTER - Navigation Links */}
         <div className="hidden md:flex space-x-10 text-white font-medium">
-          <a href="#" className="hover:text-yellow-400 transition duration-300">
+          <Link to="/" className="hover:text-yellow-400 transition duration-300">
             Home
-          </a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">
+          </Link>
+          <Link to="/about" className="hover:text-yellow-400 transition duration-300">
             About
-          </a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">
+          </Link>
+          <Link to="/gallery" className="hover:text-yellow-400 transition duration-300">
             Gallery
-          </a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">
+          </Link>
+          <Link to="/shop" className="hover:text-yellow-400 transition duration-300">
             Shop
-          </a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">
+          </Link>
+          <Link to="/book" className="hover:text-yellow-400 transition duration-300">
             Book Us
-          </a>
+          </Link>
         </div>
 
         {/* RIGHT - Login & Profile */}
         <div className="flex items-center space-x-6 text-white">
           
-          <button className="hidden md:flex items-center space-x-2 border border-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition duration-300">
+          <Link
+            to="/login"
+            className="hidden md:flex items-center space-x-2 border border-yellow-400 px-4 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition duration-300"
+          >
             <LogIn size={18} />
             <span>Login</span>
-          </button>
+          </Link>
 
-          <div className="w-10 h-10 rounded-full bg-yellow-400/20 backdrop-blur-md flex items-center justify-center border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300 cursor-pointer">
+          <Link
+            to="/profile"
+            className="w-10 h-10 rounded-full bg-yellow-400/20 backdrop-blur-md flex items-center justify-center border border-yellow-400 hover:bg-yellow-400 hover:text-black transition duration-300 cursor-pointer"
+          >
             <User size={18} />
-          </div>
+          </Link>
 
         </div>
       </div>
@@ -50,4 +57,5 @@ function Navbar() {
     </nav>
   );
 }
+
 export default Navbar;

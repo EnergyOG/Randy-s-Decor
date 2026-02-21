@@ -1,8 +1,8 @@
-import Hero from "./component/Hero";
+import Homepage from "./component/Homepage";
 function App() {
   return (
     <>
-      <Hero />
+      <Homepage />
     </>
   );
 }
