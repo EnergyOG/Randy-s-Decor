@@ -1,10 +1,11 @@
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 
-function Hero(){
-    return (
-       <div className="relative h-screen w-full overflow-hidden bg-black">
-        <Navbar />
-      {/* Background Image with Motion */}
+function Hero() {
+  return (
+    <div className="relative h-screen w-full overflow-hidden bg-black">
+      <Navbar />
+
+      {/* Background */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0 bg-cover bg-center animate-slowZoom"
@@ -13,15 +14,12 @@ function Hero(){
               "url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2000')",
           }}
         />
-        
-        {/* Dark luxury overlay */}
-        <div className="absolute inset-0 bg-black/60" />
 
-        {/* Gold gradient glow */}
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-yellow-600/20" />
       </div>
 
-      {/* Floating subtle light particles */}
+      {/* Floating Lights */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute w-72 h-72 bg-yellow-400/20 blur-3xl rounded-full top-20 left-20 animate-floatSlow" />
         <div className="absolute w-96 h-96 bg-white/10 blur-3xl rounded-full bottom-20 right-20 animate-floatSlow delay-1000" />
@@ -29,7 +27,6 @@ function Hero(){
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        
         <h1 className="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-600 drop-shadow-xl">
           Randy's Decor
         </h1>
@@ -49,6 +46,7 @@ function Hero(){
         </div>
       </div>
     </div>
-    )
+  );
 }
+
 export default Hero;
