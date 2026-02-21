@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { User, LogIn } from "lucide-react";
+import { Link } from '@tanstack/react-router';
 
 function Navbar() {
   return (
@@ -26,7 +27,7 @@ function Navbar() {
           <Link to="/shop" className="hover:text-yellow-400 transition duration-300">
             Shop
           </Link>
-          <Link to="/book" className="hover:text-yellow-400 transition duration-300">
+          <Link to="/book-us" className="hover:text-yellow-400 transition duration-300">
             Book Us
           </Link>
         </div>
