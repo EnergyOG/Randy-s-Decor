@@ -2,25 +2,14 @@ import {
   createRouter,
   createRoute,
   createRootRoute,
-  Outlet,
 } from "@tanstack/react-router";
 
-import Navbar from "./component/NavBar";
+import { RootLayout } from "./layouts/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Shop from "./pages/Shop";
 import BookUs from "./pages/BookUs";
-
-// Root layout component
-function RootLayout() {
-  return (
-    <div>
-      <Navbar />
-      <Outlet />
-    </div>
-  );
-}
 
 const rootRoute = createRootRoute({
   component: RootLayout,
