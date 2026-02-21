@@ -26,7 +26,7 @@ function Navbar() {
           <Link to="/shop" className="hover:text-yellow-400 transition duration-300">
             Shop
           </Link>
-          <Link to="/book" className="hover:text-yellow-400 transition duration-300">
+          <Link to="/book-us" className="hover:text-yellow-400 transition duration-300">
             Book Us
           </Link>
         </div>
