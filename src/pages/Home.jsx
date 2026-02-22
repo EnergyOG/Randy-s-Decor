@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
@@ -33,13 +35,18 @@ function Home() {
         </p>
 
         <div className="mt-8 flex gap-6">
-          <button className="px-8 py-3 rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold transition">
+          <Link
+            to="/book-us"
+            className="px-8 py-3 rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold transition"
+          >
             Book Consultation
-          </button>
-
-          <button className="px-8 py-3 rounded-full border border-yellow-400 text-yellow-300 hover:bg-yellow-500 hover:text-black transition">
+          </Link>
+          <Link
+            to="/gallery"
+            className="px-8 py-3 rounded-full border border-yellow-400 text-yellow-300 hover:bg-yellow-500 hover:text-black transition"
+          >
             View Gallery
-          </button>
+          </Link>
         </div>
       </div>
     </div>

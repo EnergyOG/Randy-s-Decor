@@ -1,9 +1,6 @@
-import Navbar from "../component/NavBar";
-
 function Shop() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-gray-200 pt-20">
-      <Navbar />
       <div className="max-w-5xl mx-auto px-6 py-12">
         <h1 className="text-5xl font-bold text-yellow-700 mb-10">Shop</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
