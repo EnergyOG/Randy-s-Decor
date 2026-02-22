@@ -1,18 +1,40 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import heroBg from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
+
+import img1 from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
+import img2 from "../assets/vaibhav-nagare-0ci9am-l-Dk-unsplash copy.jpg";
+import img3 from "../assets/pexels-ywanphoto-57980.jpg";
+import img4 from "../assets/pexels-jdgromov-4717558.jpg";
+import img5 from "../assets/pexels-tubarones-11450803.jpg";
 
 function Home() {
+  const images = [img1, img2, img3, img4, img5];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 2500); // change every 6s
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
-
-      {/* Background */}
+      
+      {/* Background Slideshow */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-slowZoom"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-          }}
-        />
+        {images.map((img, idx) => (
+          <div
+            key={idx}
+            className="absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out"
+            style={{
+              backgroundImage: `url(${img})`,
+              opacity: idx === index ? 1 : 0,
+            }}
+          />
+        ))}
 
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 via-transparent to-yellow-600/20" />
@@ -44,7 +66,7 @@ function Home() {
 
           <Link
             to="/gallery"
-            className="px-8 py-3 rounded-full border-2 border-yellow-400  hover:border-white hover:bg-white  hover:text-black transition duration-300"
+            className="px-8 py-3 rounded-full border-2 border-yellow-400 hover:border-white hover:bg-white hover:text-black transition duration-300"
           >
             View Gallery
           </Link>
