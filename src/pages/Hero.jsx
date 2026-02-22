@@ -1,4 +1,5 @@
 import Navbar from "../component/NavBar";
+import heroBg from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
 
 function Hero() {
   return (
@@ -10,8 +11,7 @@ function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center animate-slowZoom"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2000')",
+            backgroundImage: `url(${heroBg})`,
           }}
         />
 

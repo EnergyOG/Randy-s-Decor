@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import heroBg from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
 
 function Home() {
   return (
@@ -9,8 +10,7 @@ function Home() {
         <div
           className="absolute inset-0 bg-cover bg-center animate-slowZoom"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2000')",
+            backgroundImage: `url(${heroBg})`,
           }}
         />
 
@@ -34,16 +34,17 @@ function Home() {
           Creating unforgettable weddings, birthdays & corporate celebrations across Ghana.
         </p>
 
-        <div className="mt-8 flex gap-6">
+        <div className="mt-8 flex flex-col md:flex-row items-center gap-6">
           <Link
             to="/book-us"
-            className="px-8 py-3 rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold transition"
+            className="px-8 py-3 rounded-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold transition duration-300 hover:scale-105"
           >
             Book Consultation
           </Link>
+
           <Link
             to="/gallery"
-            className="px-8 py-3 rounded-full border border-yellow-400 text-yellow-300 hover:bg-yellow-500 hover:text-black transition"
+            className="px-8 py-3 rounded-full border-2 border-yellow-400  hover:border-white hover:bg-white  hover:text-black transition duration-300"
           >
             View Gallery
           </Link>
