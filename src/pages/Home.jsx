@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import img1 from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
-import img2 from "../assets/vaibhav-nagare-0ci9am-l-Dk-unsplash copy.jpg";
-import img3 from "../assets/pexels-ywanphoto-57980.jpg";
+import img2 from "../assets/pexels-ywanphoto-57980.jpg";
+import img1 from "../assets/pexels-tubarones-11450803.jpg";
+import img3 from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
+import img5 from "../assets/vaibhav-nagare-0ci9am-l-Dk-unsplash copy.jpg";
 import img4 from "../assets/pexels-jdgromov-4717558.jpg";
-import img5 from "../assets/pexels-tubarones-11450803.jpg";
 
 function Home() {
   const images = [img1, img2, img3, img4, img5];
