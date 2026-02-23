@@ -1,12 +1,25 @@
 import { useState } from "react";
-import fauxels from "../assets/pexels-fauxels-3184398.jpg";
-import vaibhav from "../assets/vaibhav-nagare-0ci9am-l-Dk-unsplash copy.jpg";
-import maxTitov from "../assets/max-titov-9VNiKIWDWs0-unsplash.jpg";
+import img1 from "../assets/gallery/178b7845-7a7d-4b6b-b231-de5659040def.jpg";
+import img2 from "../assets/gallery/91668493-6168-49e5-8d3e-724fa76cfa92.jpg"
+import img3 from "../assets/gallery/evelina-friman-hw_sKmjb0ns-unsplash.jpg"
+import img4 from "../assets/gallery/iskra-photography-iXTkKQyVqbM-unsplash.jpg"
+import img5 from "../assets/gallery/morrow-solutions-e0-MjQe6fnA-unsplash.jpg"
+import img6 from "../assets/gallery/pexels-soulseeker-14703685.jpg"
+import img7 from "../assets/gallery/photos-by-lanty-O38Id_cyV4M-unsplash.jpg"
+import img8 from "../assets/gallery/colorful-birthday-setup-stockcake.jpg.webp"
+import img9 from "../assets/gallery/Corporate Events.jpg"
+import img10 from "../assets/gallery/corporate-event-2-1.jpg"
+import img11 from "../assets/gallery/corporate-party-floor-setup.jpg"
+import img12 from "../assets/gallery/Happy_birthday4 copy.png"
+import img13 from "../assets/gallery/66618054_478905222683357_5482248106414872597_n.jpg"
+import img14 from "../assets/gallery/attachment-1721740057364-2.webp"
+import img15 from "../assets/gallery/Setting-up-stage.jpg"
+import img16 from "../assets/gallery/Wedding.jpeg"
+import img17 from "../assets/gallery/zigzag-img-2.jpg"
 
 const categories = [
   "All",
   "Wedding",
-  "Marriage",
   "Birthday",
   "Funeral",
   "Private Parties",
@@ -18,44 +31,104 @@ const galleryItems = [
   {
     id: 1,
     title: "Elegant Wedding Reception",
-    category: "Wedding",
-    image: vaibhav,
+    category: "Funeral",
+    image: img1,
   },
   {
     id: 2,
     title: "Traditional Marriage Ceremony",
-    category: "Marriage",
-    image: vaibhav,
+    category: "Funeral",
+    image: img2,
   },
   {
     id: 3,
     title: "Vibrant Birthday Setup",
-    category: "Birthday",
-    image: fauxels,
+    category: "Wedding",
+    image: img3,
   },
   {
     id: 4,
     title: "Intimate Funeral Tribute",
-    category: "Funeral",
-    image: maxTitov,
+    category: "Private Parties",
+    image: img4,
   },
   {
     id: 5,
     title: "Chic Private Party",
-    category: "Private Parties",
-    image: fauxels,
+    category: "Naming Ceremonies",
+    image: img5,
   },
   {
     id: 6,
     title: "Joyful Naming Ceremony",
-    category: "Naming Ceremonies",
-    image: vaibhav,
+    category: "Wedding",
+    image: img6,
   },
   {
     id: 7,
     title: "Corporate Event Styling",
+    category: "Birthday",
+    image: img7,
+  },
+  {
+    id: 8,
+    title: "Corporate Event Styling",
+    category: "Birthday",
+    image: img8,
+  },
+  {
+    id: 9,
+    title: "Corporate Event Styling",
     category: "Corporate Events",
-    image: maxTitov,
+    image: img9,
+  },
+  {
+    id: 10,
+    title: "Corporate Event Styling",
+    category: "Corporate Events",
+    image: img10,
+  },
+  {
+    id: 11,
+    title: "Corporate Event Styling",
+    category: "Corporate Events",
+    image: img11,
+  },
+  {
+    id: 12,
+    title: "Corporate Event Styling",
+    category: "Birthday",
+    image: img12,
+  },
+  {
+    id: 13,
+    title: "Corporate Event Styling",
+    category: "Naming Ceremonies",
+    image: img13,
+  },
+  {
+    id: 14,
+    title: "Corporate Event Styling",
+    category: "Naming Ceremonies",
+    image: img14,
+  },
+  {
+    id: 15,
+    title: "Intimate Funeral Tribute",
+    category: "Private Parties",
+    image: img15,
+  },
+  {
+    id: 16,
+    title: "Intimate Funeral Tribute",
+    category: "Private Parties",
+    image: img16,
+  },
+  {
+    id: 17,
+    title: "Intimate Funeral Tribute",
+    category: "Private Parties",
+    image: img17,
   },
 ];
 
