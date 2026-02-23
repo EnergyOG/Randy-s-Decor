@@ -213,6 +213,9 @@ function Gallery() {
           ))}
         </div>
       </div>
+      <div className="w-full text-center py-4 bottom-0 left-0 bg-white/70 text-gray-700 text-sm z-50 shadow-inner">
+        Randy&apos;s Decor © 2026 &nbsp;|&nbsp; All rights reserved &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms of Service &nbsp;|&nbsp; Contact Us &nbsp;|&nbsp; Follow Us
+      </div>
     </div>
   );
 }
