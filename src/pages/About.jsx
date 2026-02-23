@@ -2,68 +2,102 @@ import image1 from "../assets/pexels-fauxels-3184398.jpg";
 function About() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-gray-200 pt-18 overflow-hidden">
-      {/* Animated Glow Ball - Large floating yellow orb */}
-      <div
-        className="pointer-events-none"
-        aria-hidden="true"
-      >
-        {/* Animate the ball diagonally from top to bottom, left to right */}
-        <div className="absolute w-80 h-80 bg-yellow-300/30 blur-3xl rounded-full left-[-10%] top-[-10%] animate-glow-ball"></div>
-        {/* Optionally add subtle white/yellow glow overlays for more modern effect */}
-        <div className="absolute w-64 h-64 bg-yellow-200/10 blur-2xl rounded-full right-10 bottom-0 animate-glow-ball2"></div>
+      {/* Animated Decorative Orbs - Yellow, Blue, Red (moving nicely) */}
+      <div className="pointer-events-none" aria-hidden="true">
+        {/* Yellow Glow Ball */}
+        <div className="absolute w-64 h-64 bg-yellow-300/40 blur-3xl rounded-full left-[-8%] top-[-6%] animate-glow-yellow"></div>
+        {/* Blue Glow Ball */}
+        <div className="absolute w-52 h-52 bg-blue-400/30 blur-3xl rounded-full right-[-6%] top-[20%] animate-glow-blue"></div>
+        {/* Red Glow Ball */}
+        <div className="absolute w-72 h-72 bg-red-400/20 blur-3xl rounded-full left-[60%] bottom-[-10%] animate-glow-red"></div>
       </div>
 
       <style>
         {`
-          @keyframes glowBallMove {
+          /* Yellow ball: sweeping diagonal path, soft fade */
+          @keyframes glowYellowMove {
             0% {
-              left: -10%;
-              top: -10%;
-              opacity: 0.77;
+              left: -8%;
+              top: -6%;
+              opacity: 0.8;
             }
             35% {
-              left: 55%;
+              left: 60%;
+              top: 12%;
+              opacity: 1;
+            }
+            60% {
+              left: 25%;
+              top: 40%;
+              opacity: 0.85;
+            }
+            100% {
+              left: -8%;
+              top: -6%;
+              opacity: 0.8;
+            }
+          }
+          .animate-glow-yellow {
+            animation: glowYellowMove 20s ease-in-out infinite;
+          }
+
+          /* Blue ball: smooth movement right to left, descending and ascending */
+          @keyframes glowBlueMove {
+            0% {
+              right: -6%;
+              top: 20%;
+              opacity: 0.7;
+            }
+            25% {
+              right: 20%;
+              top: 38%;
+              opacity: 0.83;
+            }
+            60% {
+              right: 40%;
               top: 10%;
-              opacity: 0.95;
+              opacity: 0.55;
+            }
+            80% {
+              right: 18%;
+              top: 30%;
+              opacity: 0.90;
+            }
+            100% {
+              right: -6%;
+              top: 20%;
+              opacity: 0.7;
+            }
+          }
+          .animate-glow-blue {
+            animation: glowBlueMove 21s ease-in-out infinite;
+          }
+
+          /* Red ball: gliding along the bottom, gentle up and down */
+          @keyframes glowRedMove {
+            0% {
+              left: 60%;
+              bottom: -10%;
+              opacity: 0.66;
+            }
+            30% {
+              left: 10%;
+              bottom: 12%;
+              opacity: 0.84;
             }
             65% {
-              left: 10%;
-              top: 75%;
-              opacity: 0.88;
-            }
-            90% {
-              left: 70%;
-              top: 80%;
-              opacity: 0.60;
+              left: 35%;
+              bottom: 20%;
+              opacity: 0.78;
             }
             100% {
-              left: -10%;
-              top: -10%;
-              opacity: 0.77;
+              left: 60%;
+              bottom: -10%;
+              opacity: 0.66;
             }
           }
-          .animate-glow-ball {
-            animation: glowBallMove 17s ease-in-out infinite;
-          }
-          @keyframes glowBallMove2 {
-            0% {
-              right: 10px; 
-              bottom: 0; 
-              opacity: 0.82;
-            }
-            50% {
-              right: 70%;
-              bottom: 60%;
-              opacity: 0.40;
-            }
-            100% {
-              right: 10px;
-              bottom: 0;
-              opacity: 0.82;
-            }
-          }
-          .animate-glow-ball2 {
-            animation: glowBallMove2 18s ease-in-out infinite;
+          .animate-glow-red {
+            animation: glowRedMove 17s ease-in-out infinite;
           }
         `}
       </style>
