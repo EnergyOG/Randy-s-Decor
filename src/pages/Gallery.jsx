@@ -2,8 +2,8 @@ import { useState } from "react";
 import img1 from "../assets/gallery/178b7845-7a7d-4b6b-b231-de5659040def.jpg";
 import img2 from "../assets/gallery/91668493-6168-49e5-8d3e-724fa76cfa92.jpg"
 import img3 from "../assets/gallery/evelina-friman-hw_sKmjb0ns-unsplash.jpg"
-import img4 from "../assets/gallery/iskra-photography-iXTkKQyVqbM-unsplash.jpg"
-import img5 from "../assets/gallery/morrow-solutions-e0-MjQe6fnA-unsplash.jpg"
+import img4 from "../assets/gallery/elizabeth-kendall-wedding-ceremony-1221-83dd56098d6b451d84aad5ed21fcef2b.jpg"
+import img5 from "../assets/gallery/1767705169948.webp"
 import img6 from "../assets/gallery/pexels-soulseeker-14703685.jpg"
 import img7 from "../assets/gallery/photos-by-lanty-O38Id_cyV4M-unsplash.jpg"
 import img8 from "../assets/gallery/colorful-birthday-setup-stockcake.jpg.webp"
@@ -48,8 +48,8 @@ const galleryItems = [
   },
   {
     id: 4,
-    title: "Intimate Funeral Tribute",
-    category: "Private Parties",
+    title: "Vibrant Birthday Setup",
+    category: "Wedding",
     image: img4,
   },
   {
