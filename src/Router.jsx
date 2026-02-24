@@ -33,9 +33,9 @@ const galleryRoute = createRoute({
   component: Gallery,
 });
 
-const shopRoute = createRoute({
+const reviewsRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/shop",
+  path: "/reviews",
   component: Shop,
 });
 
@@ -49,7 +49,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   galleryRoute,
-  shopRoute,
+  reviewsRoute,
   bookUsRoute,
 ]);
 
