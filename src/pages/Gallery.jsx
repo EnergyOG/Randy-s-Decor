@@ -141,7 +141,43 @@ function Gallery() {
       : galleryItems.filter((item) => item.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-gray-200 pt-24">
+    <div className="relative min-h-screen bg-gradient-to-br from-yellow-50 via-yellow-100 to-gray-200 pt-24 overflow-hidden">
+      {/* Animated color-changing glow orb */}
+      <div className="pointer-events-none" aria-hidden="true">
+        <div className="absolute w-72 h-72 blur-3xl rounded-full -top-24 -left-16 animate-gallery-glow" />
+      </div>
+
+      <style>
+        {`
+          @keyframes galleryGlowMoveAndColor {
+            0% {
+              transform: translate3d(0, 0, 0) scale(1);
+              background: radial-gradient(circle at center, rgba(250, 204, 21, 0.45), transparent 70%);
+            }
+            25% {
+              transform: translate3d(40%, 20%, 0) scale(1.1);
+              background: radial-gradient(circle at center, rgba(59, 130, 246, 0.4), transparent 70%);
+            }
+            50% {
+              transform: translate3d(10%, 50%, 0) scale(1.15);
+              background: radial-gradient(circle at center, rgba(248, 113, 113, 0.42), transparent 70%);
+            }
+            75% {
+              transform: translate3d(-20%, 30%, 0) scale(1.05);
+              background: radial-gradient(circle at center, rgba(16, 185, 129, 0.4), transparent 70%);
+            }
+            100% {
+              transform: translate3d(0, 0, 0) scale(1);
+              background: radial-gradient(circle at center, rgba(250, 204, 21, 0.45), transparent 70%);
+            }
+          }
+
+          .animate-gallery-glow {
+            animation: galleryGlowMoveAndColor 24s ease-in-out infinite;
+          }
+        `}
+      </style>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         {/* Top heading + subtext */}
         <div className="mb-8 sm:mb-10">
