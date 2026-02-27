@@ -52,7 +52,7 @@ function Shop() {
             Reviews
           </h1>
           <p className="text-gray-700 max-w-2xl">
-            Hear from clients who trusted <span className="font-semibold">Randy Decor</span>{" "}
+            Hear from clients who trusted <span className="font-semibold">Randy's Decor</span>{" "}
             with their most important moments.
           </p>
         </div>
